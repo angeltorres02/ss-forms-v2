@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "pregunta": "Estado físico",
+    "opciones": [
+      {
+        "valor": "4",
+        "opcion": "4 = Bueno"
+      },
+      {
+        "valor": "3",
+        "opcion": "3 = Débil"
+      },
+      {
+        "valor": "2",
+        "opcion": "2 = Malo"
+      },
+      {
+        "valor": "1",
+        "opcion": "1 = Muy mala"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "pregunta": "Estado mental",
+    "opciones": [
+      {
+        "valor": "4",
+        "opcion": "4 = Alerta"
+      },
+      {
+        "valor": "3",
+        "opcion": "3 = Apático"
+      },
+      {
+        "valor": "2",
+        "opcion": "2 = Confuso"
+      },
+      {
+        "valor": "1",
+        "opcion": "1 = Estuporoso"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "pregunta": "Actividad",
+    "opciones": [
+      {
+        "valor": "4",
+        "opcion": "4 = Camina"
+      },
+      {
+        "valor": "3",
+        "opcion": "3 = Camina con ayuda"
+      },
+      {
+        "valor": "2",
+        "opcion": "2 = En silla de ruedas"
+      },
+      {
+        "valor": "1",
+        "opcion": "1 = En cama"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "pregunta": "Movilidad",
+    "opciones": [
+      {
+        "valor": "4",
+        "opcion": "4 = Completa"
+      },
+      {
+        "valor": "3",
+        "opcion": "3 = Limitada ligeramente"
+      },
+      {
+        "valor": "2",
+        "opcion": "2 = Muy limitada"
+      },
+      {
+        "valor": "1",
+        "opcion": "1 = Inmovil"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "pregunta": "Incontinencia",
+    "opciones": [
+      {
+        "valor": "4",
+        "opcion": "4 = No hay"
+      },
+      {
+        "valor": "3",
+        "opcion": "3 = Ocasional"
+      },
+      {
+        "valor": "2",
+        "opcion": "2 = Usualmente uriniaria"
+      },
+      {
+        "valor": "1",
+        "opcion": "1 = Doble incontinencia"
+      }
+    ]
+  }
+]
