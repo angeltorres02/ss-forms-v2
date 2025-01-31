@@ -5,19 +5,19 @@
     "opciones": [
       {
         "valor": "4",
-        "opcion": "4 = Bueno"
+        "opcion": "Bueno"
       },
       {
         "valor": "3",
-        "opcion": "3 = Débil"
+        "opcion": "Débil"
       },
       {
         "valor": "2",
-        "opcion": "2 = Malo"
+        "opcion": "Malo"
       },
       {
         "valor": "1",
-        "opcion": "1 = Muy mala"
+        "opcion": "Muy mala"
       }
     ]
   },
@@ -27,19 +27,19 @@
     "opciones": [
       {
         "valor": "4",
-        "opcion": "4 = Alerta"
+        "opcion": "Alerta"
       },
       {
         "valor": "3",
-        "opcion": "3 = Apático"
+        "opcion": "Apático"
       },
       {
         "valor": "2",
-        "opcion": "2 = Confuso"
+        "opcion": "Confuso"
       },
       {
         "valor": "1",
-        "opcion": "1 = Estuporoso"
+        "opcion": "Estuporoso"
       }
     ]
   },
@@ -49,19 +49,19 @@
     "opciones": [
       {
         "valor": "4",
-        "opcion": "4 = Camina"
+        "opcion": "Camina"
       },
       {
         "valor": "3",
-        "opcion": "3 = Camina con ayuda"
+        "opcion": "Camina con ayuda"
       },
       {
         "valor": "2",
-        "opcion": "2 = En silla de ruedas"
+        "opcion": "En silla de ruedas"
       },
       {
         "valor": "1",
-        "opcion": "1 = En cama"
+        "opcion": "En cama"
       }
     ]
   },
@@ -71,19 +71,19 @@
     "opciones": [
       {
         "valor": "4",
-        "opcion": "4 = Completa"
+        "opcion": "Completa"
       },
       {
         "valor": "3",
-        "opcion": "3 = Limitada ligeramente"
+        "opcion": "Limitada ligeramente"
       },
       {
         "valor": "2",
-        "opcion": "2 = Muy limitada"
+        "opcion": "Muy limitada"
       },
       {
         "valor": "1",
-        "opcion": "1 = Inmovil"
+        "opcion": "Inmovil"
       }
     ]
   },
@@ -93,19 +93,19 @@
     "opciones": [
       {
         "valor": "4",
-        "opcion": "4 = No hay"
+        "opcion": "No hay"
       },
       {
         "valor": "3",
-        "opcion": "3 = Ocasional"
+        "opcion": "Ocasional"
       },
       {
         "valor": "2",
-        "opcion": "2 = Usualmente uriniaria"
+        "opcion": "Usualmente uriniaria"
       },
       {
         "valor": "1",
-        "opcion": "1 = Doble incontinencia"
+        "opcion": "Doble incontinencia"
       }
     ]
   }
