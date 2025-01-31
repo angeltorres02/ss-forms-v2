@@ -17,7 +17,7 @@ export const Header = ({ title, subtitle }: HeaderProps) => {
           style={{ height: "auto" }}
         />
       </div>
-      <div className="flex flex-col items-center mt-6">
+      <div className="flex flex-col items-center mt-6 mb-6">
         <h1 className="text-4xl font-bold">{title}</h1>
         <h2 className="text-2xl">{subtitle}</h2>
         <div className="w-[80%] h-0.5 bg-gray-800 mt-4 mb-2"></div>
