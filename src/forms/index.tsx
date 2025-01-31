@@ -1,2 +1,4 @@
 export { Header } from "./components/Header";
-export { Form } from "./components/Form";
+export { NortonForm } from "./components/NortonForm";
+export { NortonQuestion } from "./components/NortonQuestion";
+export { SubmitButton } from "./components/SubmitButton";
