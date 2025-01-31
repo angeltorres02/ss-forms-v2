@@ -1,4 +1,5 @@
-import { Form, Header } from "@/forms/index";
+import { NortonForm, Header } from "@/forms/index";
+import questions from "./data/preguntas.json";
 
 export default function NortonPage() {
   return (
@@ -7,7 +8,7 @@ export default function NortonPage() {
         title="Escala de Norton"
         subtitle="(Valoración del riesgo de úlceras por presión)"
       />
-      <Form />
+      <NortonForm preguntas={questions} />
     </div>
   );
 }
