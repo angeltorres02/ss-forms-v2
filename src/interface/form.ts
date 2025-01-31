@@ -1,10 +1,10 @@
-export interface Preguntas {
+export interface Norton {
   id: string;
   pregunta: string;
-  opciones: Opciones[];
+  opciones: OpcionesNorton[];
 }
 
-export interface Opciones {
+export interface OpcionesNorton {
   valor: string;
   opcion: string;
 }
