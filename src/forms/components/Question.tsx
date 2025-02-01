@@ -10,7 +10,7 @@ interface NortonQuestionProps {
   error?: FieldError;
 }
 
-export const NortonQuestion = ({
+export const Question = ({
   question,
   register,
   error,
@@ -21,17 +21,17 @@ export const NortonQuestion = ({
   return (
     <>
       <div className="flex flex-col w-[60%] items-center">
-        <p className="font-bold text-4xl bg-gray-900 p-2 w-full rounded-lg mt-4 mb-2 text-white text-center ">
+        <p className="font-bold text-2xl bg-gray-900 p-2 w-full rounded-lg mt-4 mb-2 text-white text-center ">
           {question.pregunta}
         </p>
 
         <div className="flex gap-2 w-full justify-between">
-          <div className="bg-gray-800 rounded-lg p-4 mb-4 w-[60%]">
+          <div className="bg-gray-700 rounded-lg p-4 mb-4 w-[60%]">
             {question.opciones.map((opcion) => (
               <label
                 key={opcion.valor}
-                className={`flex gap-2  hover:bg-gray-700 transition-colors duration-200 rounded-lg p-2 text-white 
-              ${selectedValue === opcion.valor ? "bg-gray-700" : ""}`}
+                className={`flex gap-2  hover:bg-gray-600 transition-colors duration-200 rounded-lg p-2 text-white 
+              ${selectedValue === opcion.valor ? "bg-gray-600" : ""}`}
               >
                 <input
                   type="radio"
@@ -44,10 +44,13 @@ export const NortonQuestion = ({
               </label>
             ))}
           </div>
+
+          {/* Botón para agregar una nota */}
+
           {!openArea ? (
             <button
               onClick={() => setOpenArea((state) => !state)}
-              className="bg-gray-800 text-white rounded-lg mb-4 w-[40%] hover:bg-gray-700 transition-colors duration-200"
+              className="bg-gray-700 text-white rounded-lg mb-4 w-[40%] hover:bg-gray-600 transition-colors duration-200"
             >
               Agregar Nota
             </button>
@@ -70,7 +73,11 @@ export const NortonQuestion = ({
           )}
         </div>
       </div>
-      {error && <p className="text-red-500 mt-2 ">{error.message}</p>}
+      {error && (
+        <p className="text-white mt-2 p-2 rounded-lg bg-red-500 ">
+          {error.message}
+        </p>
+      )}
     </>
   );
 };

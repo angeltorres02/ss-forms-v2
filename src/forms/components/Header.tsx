@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeaderProps {
   title: string;
@@ -9,13 +10,15 @@ export const Header = ({ title, subtitle }: HeaderProps) => {
   return (
     <>
       <div className="bg-gray-800 flex p-8">
-        <Image
-          alt="BUAP Logo"
-          src="/buap-logo.webp"
-          width={100}
-          height={50}
-          style={{ height: "auto" }}
-        />
+        <Link href={"/"}>
+          <Image
+            alt="BUAP Logo"
+            src="/buap-logo.webp"
+            width={100}
+            height={33}
+            style={{ height: "auto" }}
+          />
+        </Link>
       </div>
       <div className="flex flex-col items-center mt-6 mb-6">
         <h1 className="text-4xl font-bold">{title}</h1>
