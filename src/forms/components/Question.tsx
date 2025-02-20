@@ -35,7 +35,7 @@ export const Question = ({
               >
                 <input
                   type="radio"
-                  {...register(`pregunta_${question.id}`, {
+                  {...register(question.pregunta, {
                     onChange: (e) => setSelectedValue(e.target.value),
                   })}
                   value={opcion.valor}
@@ -44,8 +44,6 @@ export const Question = ({
               </label>
             ))}
           </div>
-
-          {/* Botón para agregar una nota */}
 
           {!openArea ? (
             <button

@@ -8,7 +8,7 @@ export const schemaGenerator = (preguntas: Norton[]) => {
   const schema: Record<string, yup.AnySchema> = {};
 
   preguntas.forEach((pregunta) => {
-    const nombreCampo = `pregunta_${pregunta.id}`;
+    const nombreCampo = pregunta.pregunta;
     const notasCampo = `notas_${pregunta.id}`;
     const valoresValidos = pregunta.opciones.map((option) =>
       parseInt(option.valor)

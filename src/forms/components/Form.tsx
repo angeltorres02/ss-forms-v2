@@ -23,12 +23,26 @@ type FormValues = {
   [key: `pregunta${string}`]: string;
 };
 
-const SECRET_KEY = process.env.NEXT_PUBLIC_SECRET_KEY!;
-
 function decryptData(encryptedData: string) {
-  const bytes = CryptoJS.AES.decrypt(encryptedData, SECRET_KEY);
+  const bytes = CryptoJS.AES.decrypt(
+    encryptedData,
+    process.env.NEXT_PUBLIC_SECRET_KEY!
+  );
   return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 }
+
+const calculateScore = (data: FormValues): number => {
+  return Object.values(data).reduce(
+    (total, value) => total + parseInt(value, 10),
+    0
+  );
+};
+
+const getDiagnostic = (score: number): string => {
+  if (score <= 12) return "Riesgo alto";
+  if (score <= 16) return "Riesgo moderado";
+  return "Bajo riesgo";
+};
 
 export const Form = ({ preguntas = [] }: FormProps) => {
   const params = useSearchParams();
@@ -59,11 +73,15 @@ export const Form = ({ preguntas = [] }: FormProps) => {
   });
 
   const onSubmit = async (data: FormValues) => {
+    const totalScore = calculateScore(data);
+    const diagnostic = getDiagnostic(totalScore);
+
     const payload = {
       medicoId: datosIniciales?.medicoId,
       pacienteId: datosIniciales?.pacienteId,
       tipo,
-      respuestas: data, // Lo que el usuario contestó en el formulario
+      diagnostic,
+      respuestas: data,
     };
 
     try {
@@ -74,13 +92,11 @@ export const Form = ({ preguntas = [] }: FormProps) => {
       });
       const result = await res.json();
       console.log("Formulario guardado con ID:", result.formularioId);
-      // Aquí podrías redirigir o mostrar un mensaje de éxito
+      console.log(payload);
     } catch (error) {
       console.error("Error enviando el formulario:", error);
     }
   };
-
-  // const onSubmit = (data: FormValues) => console.log(data);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col ">
