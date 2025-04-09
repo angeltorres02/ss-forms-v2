@@ -17,6 +17,7 @@ export const Header = ({ title, subtitle }: HeaderProps) => {
             width={100}
             height={33}
             style={{ height: "auto" }}
+            priority={true}
           />
         </Link>
       </div>
