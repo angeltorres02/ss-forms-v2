@@ -45,8 +45,6 @@ export const Question = ({
             ))}
           </div>
 
-          {/* Botón para agregar una nota */}
-
           {!openArea ? (
             <button
               onClick={() => setOpenArea((state) => !state)}
