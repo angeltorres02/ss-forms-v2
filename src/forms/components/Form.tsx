@@ -1,14 +1,16 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Norton } from "@/interface/form";
+
+import CryptoJS from "crypto-js";
+
 import { schemaGenerator } from "@/validations";
 import { Question } from "./Question";
 import { SubmitButton } from "./SubmitButton";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import * as CryptoJS from "crypto-js";
+import type { Norton } from "@/interface/form";
 
 interface FormProps {
   preguntas: Norton[];
@@ -23,6 +25,10 @@ type FormValues = {
   [key: `pregunta${string}`]: string;
 };
 
+type Resultado = {
+  formularioId: string;
+};
+
 const SECRET_KEY = process.env.NEXT_PUBLIC_SECRET_KEY!;
 
 function decryptData(encryptedData: string) {
@@ -32,11 +38,43 @@ function decryptData(encryptedData: string) {
 
 export const Form = ({ preguntas = [] }: FormProps) => {
   const params = useSearchParams();
-  const tipo = params.get("tipo");
   const encryptedData = params.get("ed");
+  const tipo = params.get("tipo");
   const [datosIniciales, setDatosIniciales] = useState<DatosIniciales>();
 
   const schema = schemaGenerator(preguntas);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors = {} },
+  } = useForm<FormValues>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = async (data: FormValues) => {
+    const payload = {
+      medicoId: datosIniciales!.medicoId,
+      pacienteId: datosIniciales!.pacienteId,
+      tipo,
+      respuestas: data,
+    };
+
+    try {
+      const res = await fetch("http://localhost:3001/formulario/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result: Resultado = await res.json();
+      console.log("Formulario guardado con ID:", result.formularioId);
+
+      if (result.formularioId) {
+        console.log(`Sending: ${JSON.stringify(payload)}`);
+      }
+    } catch (error) {
+      console.error("Error enviando el formulario:", error);
+    }
+  };
 
   useEffect(() => {
     if (encryptedData) {
@@ -49,38 +87,6 @@ export const Form = ({ preguntas = [] }: FormProps) => {
       }
     }
   }, [encryptedData]);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors = {} },
-  } = useForm<FormValues>({
-    resolver: yupResolver(schema),
-  });
-
-  const onSubmit = async (data: FormValues) => {
-    const payload = {
-      medicoId: datosIniciales?.medicoId,
-      pacienteId: datosIniciales?.pacienteId,
-      tipo,
-      respuestas: data, // Lo que el usuario contestó en el formulario
-    };
-
-    try {
-      const res = await fetch("http://localhost:3001/formulario/add", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const result = await res.json();
-      console.log("Formulario guardado con ID:", result.formularioId);
-      // Aquí podrías redirigir o mostrar un mensaje de éxito
-    } catch (error) {
-      console.error("Error enviando el formulario:", error);
-    }
-  };
-
-  // const onSubmit = (data: FormValues) => console.log(data);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col ">
