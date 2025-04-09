@@ -20,7 +20,7 @@ type DatosIniciales = {
 };
 
 type FormValues = {
-  [key: `pregunta${string}`]: string;
+  [key: string]: string;
 };
 
 function decryptData(encryptedData: string) {
@@ -31,18 +31,18 @@ function decryptData(encryptedData: string) {
   return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 }
 
-const calculateScore = (data: FormValues): number => {
-  return Object.values(data).reduce(
-    (total, value) => total + parseInt(value, 10),
-    0
-  );
-};
+// const calculateScore = (data: FormValues): number => {
+//   return Object.values(data).reduce(
+//     (total, value) => total + parseInt(value, 10),
+//     0
+//   );
+// };
 
-const getDiagnostic = (score: number): string => {
-  if (score <= 12) return "Riesgo alto";
-  if (score <= 16) return "Riesgo moderado";
-  return "Bajo riesgo";
-};
+// const getDiagnostic = (score: number): string => {
+//   if (score <= 12) return "Riesgo alto";
+//   if (score <= 16) return "Riesgo moderado";
+//   return "Bajo riesgo";
+// };
 
 export const Form = ({ preguntas = [] }: FormProps) => {
   const params = useSearchParams();
@@ -73,26 +73,36 @@ export const Form = ({ preguntas = [] }: FormProps) => {
   });
 
   const onSubmit = async (data: FormValues) => {
-    const totalScore = calculateScore(data);
-    const diagnostic = getDiagnostic(totalScore);
+    // const totalScore = calculateScore(data);
+    // const diagnostic = getDiagnostic(totalScore);
+    console.log("aqui si");
 
     const payload = {
       medicoId: datosIniciales?.medicoId,
       pacienteId: datosIniciales?.pacienteId,
       tipo,
-      diagnostic,
+      // diagnostic,
       respuestas: data,
     };
 
+    console.log(payload);
+
     try {
+      console.log("Sending payload:", JSON.stringify(payload));
       const res = await fetch("http://localhost:3001/formulario/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error(`Server responded with status ${res.status}:`, errorText);
+        return;
+      }
+
       const result = await res.json();
       console.log("Formulario guardado con ID:", result.formularioId);
-      console.log(payload);
     } catch (error) {
       console.error("Error enviando el formulario:", error);
     }

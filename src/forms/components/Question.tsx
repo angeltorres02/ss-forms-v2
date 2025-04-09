@@ -35,7 +35,7 @@ export const Question = ({
               >
                 <input
                   type="radio"
-                  {...register(question.pregunta, {
+                  {...register(question.id, {
                     onChange: (e) => setSelectedValue(e.target.value),
                   })}
                   value={opcion.valor}
