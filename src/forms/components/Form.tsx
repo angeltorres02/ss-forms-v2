@@ -9,6 +9,7 @@ import { SubmitButton } from "./SubmitButton";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import * as CryptoJS from "crypto-js";
+import { useRouter } from "next/navigation";
 
 interface FormProps {
   preguntas: Norton[];
@@ -31,19 +32,6 @@ function decryptData(encryptedData: string) {
   return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 }
 
-// const calculateScore = (data: FormValues): number => {
-//   return Object.values(data).reduce(
-//     (total, value) => total + parseInt(value, 10),
-//     0
-//   );
-// };
-
-// const getDiagnostic = (score: number): string => {
-//   if (score <= 12) return "Riesgo alto";
-//   if (score <= 16) return "Riesgo moderado";
-//   return "Bajo riesgo";
-// };
-
 export const Form = ({ preguntas = [] }: FormProps) => {
   const params = useSearchParams();
   const tipo = params.get("tipo");
@@ -51,6 +39,15 @@ export const Form = ({ preguntas = [] }: FormProps) => {
   const [datosIniciales, setDatosIniciales] = useState<DatosIniciales>();
 
   const schema = schemaGenerator(preguntas);
+
+  const router = useRouter();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors = {} },
+  } = useForm<FormValues>({
+    resolver: yupResolver(schema),
+  });
 
   useEffect(() => {
     if (encryptedData) {
@@ -64,24 +61,11 @@ export const Form = ({ preguntas = [] }: FormProps) => {
     }
   }, [encryptedData]);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors = {} },
-  } = useForm<FormValues>({
-    resolver: yupResolver(schema),
-  });
-
   const onSubmit = async (data: FormValues) => {
-    // const totalScore = calculateScore(data);
-    // const diagnostic = getDiagnostic(totalScore);
-    console.log("aqui si");
-
     const payload = {
       medicoId: datosIniciales?.medicoId,
       pacienteId: datosIniciales?.pacienteId,
       tipo,
-      // diagnostic,
       respuestas: data,
     };
 
@@ -102,7 +86,9 @@ export const Form = ({ preguntas = [] }: FormProps) => {
       }
 
       const result = await res.json();
+
       console.log("Formulario guardado con ID:", result.formularioId);
+      router.push(`resultados/${tipo}?id=${result.formularioId}`);
     } catch (error) {
       console.error("Error enviando el formulario:", error);
     }
