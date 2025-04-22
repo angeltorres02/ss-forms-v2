@@ -5,7 +5,7 @@ import { Header } from "@/forms";
 import { useEffect, useState } from "react";
 import { UserData } from "@/interface/userData";
 import { useRouter } from "next/navigation";
-import { MnaInfo, NortonInfo, SarcInfo } from "@/consts/resultatsInfo";
+import { MNA_INFO, SARC_INFO, NORTON_INFO } from "@/consts/resultsInfo";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -15,7 +15,27 @@ export default function ResultadosPage() {
   const id = searchParams.get("id");
 
   const [userData, setUserData] = useState<UserData>();
-  const [allResponses, setAllResponses] = useState<UserData[]>();
+  const [allResponses, setAllResponses] = useState<UserData[]>([]);
+
+  const formatResponses = () => {
+    if (!allResponses || allResponses.length === 0 || !info) {
+      return [];
+    }
+
+    const result: Record<string, string>[] = [];
+
+    allResponses.forEach((response) => {
+      const currentResponses: Record<string, string> = {};
+      Object.entries(response.respuestas).forEach(
+        ([key, value]) =>
+          (currentResponses[info.questions[Number(key) - 1]] =
+            info.responses[Number(key) - 1][Number(value)])
+      );
+      result.push(currentResponses);
+    });
+
+    return result;
+  };
 
   if (!id) {
     router.back();
@@ -23,56 +43,97 @@ export default function ResultadosPage() {
 
   const getInfo = (type: string) => {
     let info;
+
     switch (type) {
       case "sarc":
-        info = SarcInfo;
+        info = SARC_INFO;
+
         break;
 
       case "norton":
-        info = NortonInfo;
+        info = NORTON_INFO;
+
         break;
 
       case "mna":
-        info = MnaInfo;
+        info = MNA_INFO;
+
         break;
     }
     return info;
   };
 
   const info = getInfo(params.type);
+  const formattedResponses = formatResponses();
 
   useEffect(() => {
-    try {
-      fetch(`http://localhost:3001/formulario/get/${id}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setUserData(data);
-        });
-    } catch (error) {
-      console.error(error);
+    const fetchData = async () => {
+      try {
+        await fetch(`http://localhost:3001/formulario/get/${id}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (params.type !== data.tipo) {
+              router.back();
+            }
+            setUserData(data);
+          });
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    if (id) {
+      fetchData();
     }
-  }, [id]);
+  }, [id, params.type, router]);
 
   useEffect(() => {
-    try {
-      fetch(
-        `http://localhost:3001/formulario/get/${userData?.pacienteId}/${userData?.tipo}`
-      )
-        .then((res) => res.json())
-        .then((data) => setAllResponses(data));
-    } catch (error) {
-      console.error(error);
+    const fetchData = async () => {
+      try {
+        await fetch(
+          `http://localhost:3001/formulario/get/${userData?.pacienteId}/${userData?.tipo}`
+        )
+          .then((res) => res.json())
+          .then((data) => setAllResponses(data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    if (userData?.pacienteId && userData?.tipo) {
+      fetchData();
     }
   }, [userData?.pacienteId, userData?.tipo]);
 
   return (
-    <div>
+    <>
       <Header
-        title={info?.title ?? "Categoria no encontrada"}
-        subtitle={info?.subtitle ?? "Verfica los datos y vuelve a intentarlo"}
+        title={info?.title ?? "Categoría no encontrada"}
+        subtitle={info?.subtitle ?? "Verifica los datos y vuelve a intentarlo"}
       />
 
-      {allResponses?.map((response) => JSON.stringify(response.repuestas))}
-    </div>
+      <div className="flex flex-col justify-center items-center gap-2 mx-[10vw]">
+        <h3 className="text-3xl font-bold mb-4">Últimas respuestas</h3>
+        <div className="grid grid-cols-3 w-full gap-6 relative">
+          {formattedResponses.length > 0 ? (
+            Object.entries(formattedResponses[0]).map(([key, val], i) => (
+              <div
+                key={i}
+                className="bg-gray-800  rounded-xl h-[250px] flex flex-col"
+              >
+                <p className="text-xl text-[#ececec] font-bold text-center text-balance h-[150px] flex justify-center items-center">
+                  {key}
+                </p>
+                <p className="text-lg bg-gray-300 rounded-md h-[100px] flex justify-center items-center font-semibold">
+                  {val}
+                </p>
+              </div>
+            ))
+          ) : (
+            <p className="text-center font-bold text-6xl">Cargando...</p>
+          )}
+        </div>
+      </div>
+    </>
   );
 }

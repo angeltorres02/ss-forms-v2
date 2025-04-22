@@ -3,8 +3,6 @@ export interface UserData {
   id: string;
   medicoId: string;
   pacienteId: string;
-  repuestas: object;
+  respuestas: object;
   tipo: string;
 }
-
-exp;
