@@ -1,11 +1,23 @@
 "use client";
 import { useParams, useSearchParams } from "next/navigation";
 
-import { Header } from "@/forms";
+import { CustomTooltip, Header, Loading } from "@/forms";
 import { useEffect, useState } from "react";
 import { UserData } from "@/interface/userData";
 import { useRouter } from "next/navigation";
 import { MNA_INFO, SARC_INFO, NORTON_INFO } from "@/consts/resultsInfo";
+import { AllResponses } from "@/interface/allResponses";
+import { chartData } from "@/interface/chartData";
+import {
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -47,22 +59,47 @@ export default function ResultadosPage() {
     switch (type) {
       case "sarc":
         info = SARC_INFO;
-
         break;
 
       case "norton":
         info = NORTON_INFO;
-
         break;
 
       case "mna":
         info = MNA_INFO;
-
         break;
     }
     return info;
   };
 
+  const getScore = (responses: AllResponses[]) => {
+    const data: chartData[] = [];
+
+    responses.forEach((res, i) => {
+      const score = Object.values(res.respuestas).reduce(
+        (acc, prev) => acc + prev,
+        0
+      );
+
+      const date = res.createdAt ? new Date(res.createdAt) : new Date();
+      const formattedDate = date.toLocaleDateString("es-MX", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "2-digit",
+      });
+
+      data.push({
+        nombre: formattedDate,
+        puntos: score,
+        fecha: date,
+        diagnostico: i + 1,
+      });
+    });
+
+    return data;
+  };
+
+  const data = getScore(allResponses);
   const info = getInfo(params.type);
   const formattedResponses = formatResponses();
 
@@ -105,6 +142,9 @@ export default function ResultadosPage() {
     }
   }, [userData?.pacienteId, userData?.tipo]);
 
+  console.log(allResponses);
+  console.log(data);
+
   return (
     <>
       <Header
@@ -112,9 +152,9 @@ export default function ResultadosPage() {
         subtitle={info?.subtitle ?? "Verifica los datos y vuelve a intentarlo"}
       />
 
-      <div className="flex flex-col justify-center items-center gap-2 mx-[10vw]">
+      <div className="flex flex-col justify-center items-center gap-2 mx-[10vw] mt-10">
         <h3 className="text-3xl font-bold mb-4">Últimas respuestas</h3>
-        <div className="grid grid-cols-3 w-full gap-6 relative">
+        <div className="grid grid-cols-3 w-full gap-8 relative">
           {formattedResponses.length > 0 ? (
             Object.entries(formattedResponses[0]).map(([key, val], i) => (
               <div
@@ -130,10 +170,42 @@ export default function ResultadosPage() {
               </div>
             ))
           ) : (
-            <p className="text-center font-bold text-6xl">Cargando...</p>
+            <Loading />
           )}
         </div>
       </div>
+
+      {data.length > 0 && (
+        <div className="h-[400px] mt-30 mx-[10vw] flex flex-col justify-center items-center ">
+          <h3 className="text-3xl font-bold mb-4">Resultados</h3>
+
+          <ResponsiveContainer width="80%" height="90%" className="w-full ">
+            <LineChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="nombre" />
+              <YAxis />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend />
+              <Line
+                type="monotone"
+                dataKey="puntos"
+                stroke="#8884d8"
+                activeDot={{ r: 8 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      )}
     </>
   );
 }
