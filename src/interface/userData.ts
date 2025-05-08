@@ -1,5 +1,5 @@
 export interface UserData {
-  createdAt: string;
+  createdAt: Date | null;
   id: string;
   medicoId: string;
   pacienteId: string;
