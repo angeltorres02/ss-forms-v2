@@ -1,4 +1,5 @@
-import { Form, Header } from "@/forms";
+import { Header } from "@/components/Header";
+import { Form } from "@/components/Form";
 import questions from "./data/preguntas.json";
 
 export default function MNAPage() {
