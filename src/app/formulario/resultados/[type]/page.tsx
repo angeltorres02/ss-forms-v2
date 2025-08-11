@@ -1,23 +1,26 @@
 "use client";
-import { useParams, useSearchParams } from "next/navigation";
-
-import { CustomTooltip, Header, Loading } from "@/forms";
 import { useEffect, useState } from "react";
-import { UserData } from "@/interface/userData";
+import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { MNA_INFO, SARC_INFO, NORTON_INFO } from "@/consts/resultsInfo";
+
+import { Header } from "@/components/Header";
+import { Loading } from "@/components/loading/Loading";
+import { Chart } from "@/components/chart/Chart";
+
+import {
+  MNA_INFO,
+  SARC_INFO,
+  NORTON_INFO,
+  BARRERAS_INFO,
+} from "@/consts/resultsInfo";
+
+import { UserData } from "@/interface/userData";
 import { AllResponses } from "@/interface/allResponses";
 import { chartData } from "@/interface/chartData";
-import {
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { NortonScore } from "@/components/score/NortonScore";
+import { SarcScore } from "@/components/score/SarcScore";
+import { MnaScore } from "@/components/score/MnaScore";
+import { BarrerasScore } from "@/components/score/BarrerasScore";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -40,8 +43,8 @@ export default function ResultadosPage() {
       const currentResponses: Record<string, string> = {};
       Object.entries(response.respuestas).forEach(
         ([key, value]) =>
-          (currentResponses[info.questions[Number(key) - 1]] =
-            info.responses[Number(key) - 1][Number(value)])
+          (currentResponses[info.info!.questions[Number(key) - 1]] =
+            info.info!.responses[Number(key) - 1][Number(value) - 1])
       );
       result.push(currentResponses);
     });
@@ -55,29 +58,47 @@ export default function ResultadosPage() {
 
   const getInfo = (type: string) => {
     let info;
+    let result;
 
     switch (type) {
       case "sarc":
         info = SARC_INFO;
+        result = <SarcScore score={data[data.length - 1]?.puntos || 0} />;
         break;
 
       case "norton":
         info = NORTON_INFO;
+        result = <NortonScore score={data[data.length - 1]?.puntos || 0} />;
         break;
 
       case "mna":
         info = MNA_INFO;
+        result = <MnaScore score={data[data.length - 1]?.puntos || 0} />;
+        break;
+
+      case "barreras":
+        info = BARRERAS_INFO;
+        result = (
+          <BarrerasScore
+            preguntas={
+              allResponses[allResponses.length - 1]?.respuestas as Record<
+                string,
+                string | undefined
+              >
+            }
+          />
+        );
         break;
     }
-    return info;
+    return { info, result };
   };
 
   const getScore = (responses: AllResponses[]) => {
     const data: chartData[] = [];
 
     responses.forEach((res, i) => {
-      const score = Object.values(res.respuestas).reduce(
-        (acc, prev) => acc + prev,
+      const score: number = Object.values(res.respuestas).reduce(
+        (acc, prev) => acc + (Number(prev) || 0),
         0
       );
 
@@ -92,7 +113,7 @@ export default function ResultadosPage() {
         nombre: formattedDate,
         puntos: score,
         fecha: date,
-        diagnostico: i + 1,
+        numeroDiagnostico: i + 1,
       });
     });
 
@@ -131,7 +152,10 @@ export default function ResultadosPage() {
           `http://localhost:3001/formulario/get/${userData?.pacienteId}/${userData?.tipo}`
         )
           .then((res) => res.json())
-          .then((data) => setAllResponses(data));
+          .then((data) => {
+            console.log(data);
+            setAllResponses(data);
+          });
       } catch (error) {
         console.error(error);
       }
@@ -142,33 +166,40 @@ export default function ResultadosPage() {
     }
   }, [userData?.pacienteId, userData?.tipo]);
 
-  console.log(allResponses);
-  console.log(data);
+  console.log(allResponses, formattedResponses);
 
   return (
     <>
       <Header
-        title={info?.title ?? "Categoría no encontrada"}
-        subtitle={info?.subtitle ?? "Verifica los datos y vuelve a intentarlo"}
+        title={info.info?.title ?? "Categoría no encontrada"}
+        subtitle={
+          info.info?.subtitle ?? "Verifica los datos y vuelve a intentarlo"
+        }
       />
 
       <div className="flex flex-col justify-center items-center gap-2 mx-[10vw] mt-10">
         <h3 className="text-3xl font-bold mb-4">Últimas respuestas</h3>
         <div className="grid grid-cols-3 w-full gap-8 relative">
           {formattedResponses.length > 0 ? (
-            Object.entries(formattedResponses[0]).map(([key, val], i) => (
-              <div
-                key={i}
-                className="bg-gray-800  rounded-xl h-[250px] flex flex-col"
-              >
-                <p className="text-xl text-[#ececec] font-bold text-center text-balance h-[150px] flex justify-center items-center">
-                  {key}
-                </p>
-                <p className="text-lg bg-gray-300 rounded-md h-[100px] flex justify-center items-center font-semibold">
-                  {val}
-                </p>
-              </div>
-            ))
+            Object.entries(
+              formattedResponses[formattedResponses.length - 1]
+            ).map(([key, val], i) => {
+              if (val === undefined) return null;
+
+              return (
+                <div
+                  key={i}
+                  className="bg-gray-800  rounded-xl h-[250px] flex flex-col"
+                >
+                  <p className=" text-sm md:text-base 2xl:text-xl text-[#ececec] font-bold text-center text-balance h-[150px] flex justify-center items-center">
+                    {key}
+                  </p>
+                  <p className="text-lg bg-gray-300 rounded-md h-[100px] flex justify-center items-center font-semibold">
+                    {val}
+                  </p>
+                </div>
+              );
+            })
           ) : (
             <Loading />
           )}
@@ -176,34 +207,12 @@ export default function ResultadosPage() {
       </div>
 
       {data.length > 0 && (
-        <div className="h-[400px] mt-30 mx-[10vw] flex flex-col justify-center items-center ">
+        <div className="mt-30 mx-[10vw] flex flex-col justify-center items-center mb-20">
           <h3 className="text-3xl font-bold mb-4">Resultados</h3>
-
-          <ResponsiveContainer width="80%" height="90%" className="w-full ">
-            <LineChart
-              width={500}
-              height={300}
-              data={data}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="nombre" />
-              <YAxis />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              <Line
-                type="monotone"
-                dataKey="puntos"
-                stroke="#8884d8"
-                activeDot={{ r: 8 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+          <div className="w-full sm:h-[600px] md:h-[550px] 2xl:h-[400px] flex gap-8">
+            <Chart data={data} />
+            {info.result}
+          </div>
         </div>
       )}
     </>
