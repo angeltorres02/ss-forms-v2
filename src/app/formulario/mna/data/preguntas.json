@@ -4,15 +4,15 @@
     "pregunta": "Ha perdido el apetito? Ha comido menos por falta de apetito, problemas digestivos, dificultades de masticación o deglución en los últimos 3 meses?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ha comido mucho menos"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Ha comido menos"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Ha comido igual"
       }
     ]
@@ -22,19 +22,19 @@
     "pregunta": "Pérdida reciente de peso (< 3 meses)",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Pérdida de peso > 3 kg"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "No lo sabe"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Pérdida de peso entre 1 y 3 kg"
       },
       {
-        "valor": "3",
+        "valor": "4",
         "opcion": "No ha habido pérdida de peso"
       }
     ]
@@ -44,15 +44,15 @@
     "pregunta": "Movilidad",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "De la cama al sillón"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Autonomía en el interior"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Sale del domicilio"
       }
     ]
@@ -62,7 +62,7 @@
     "pregunta": "Ha tenido una enfermedad aguda o situación de estrés psicológico en los últimos 3 meses",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Sí"
       },
       {
@@ -76,15 +76,15 @@
     "pregunta": "Problemas neuropsicológicos",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Demencia o depresión grave"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Demencia moderada"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Sin problemas psicológicos"
       }
     ]
@@ -94,19 +94,19 @@
     "pregunta": "Índice de masa corporal (IMC)",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "IMC < 19 kg/m²"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "IMC entre 19 y 21 kg/m²"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "IMC entre 21 y 23 kg/m²"
       },
       {
-        "valor": "3",
+        "valor": "4",
         "opcion": "IMC ≥ 23 kg/m²"
       }
     ]
@@ -116,11 +116,11 @@
     "pregunta": "Perímetro de la pantorrilla (cm)",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "< 31 cm"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "≥ 31 cm"
       }
     ]

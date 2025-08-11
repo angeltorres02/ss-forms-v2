@@ -4,15 +4,15 @@
     "pregunta": "¿Qué tanta dificultad tiene para llevar o cargar 4.5 kg?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ninguna"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Alguna"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Mucha o incapaz"
       }
     ]
@@ -22,15 +22,15 @@
     "pregunta": "¿Qué tanta dificultad tiene para cruzar caminando por un cuarto?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ninguna"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Alguna"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Mucha, usando auxiliares o incapaz"
       }
     ]
@@ -40,15 +40,15 @@
     "pregunta": "¿Qué tanta dificultad tiene para levantarse de una silla o cama?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ninguna"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Alguna"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Mucha o incapaz sin ayuda"
       }
     ]
@@ -58,15 +58,15 @@
     "pregunta": "¿Qué tanta dificultad tiene para subir 10 escalones?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ninguna"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "Alguna"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "Mucha o incapaz"
       }
     ]
@@ -76,15 +76,15 @@
     "pregunta": "¿Cuántas veces se ha caído en el último año?",
     "opciones": [
       {
-        "valor": "0",
+        "valor": "1",
         "opcion": "Ninguna"
       },
       {
-        "valor": "1",
+        "valor": "2",
         "opcion": "1-3 caídas"
       },
       {
-        "valor": "2",
+        "valor": "3",
         "opcion": "4 o más caídas"
       }
     ]
