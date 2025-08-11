@@ -1,5 +1,6 @@
 export interface Norton {
   id: string;
+  categoria?: string;
   pregunta: string;
   opciones: OpcionesNorton[];
 }
