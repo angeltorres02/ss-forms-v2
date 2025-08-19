@@ -1,0 +1,2136 @@
+[
+  {
+    "id": 1,
+    "categoria": "FÍSICO",
+    "pregunta": "¿Le han golpeado?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "1_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "1_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "1_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "1_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoria": "FÍSICO",
+    "pregunta": "¿Le han dado puñetazos o patadas?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "2_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "2_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "2_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "2_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "categoria": "FÍSICO",
+    "pregunta": "¿Le han empujado o le han jalado el pelo?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "3_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "3_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "3_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "3_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "categoria": "FÍSICO",
+    "pregunta": "¿Le han aventado algún objeto?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "4_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "4_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "4_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "4_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "categoria": "FÍSICO",
+    "pregunta": "¿Le han agredido con algún cuchillo o navaja?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "5_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "5_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "5_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "5_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿Le han humillado o se han burlado de usted?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "6_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "6_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "6_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "6_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿Le han tratado con indiferencia o le han ignorado?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "7_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "7_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "7_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "7_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿Le han aislado o le han corrido de la casa?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "8_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "8_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "8_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "8_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿Le han hecho sentir miedo?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "9_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "9_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "9_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "9_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿No han respetado sus decisiones?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "10_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "10_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "10_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "10_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "categoria": "PSICOLÓGICO",
+    "pregunta": "¿Le han prohibido salir o que la visiten?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "11_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "11_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "11_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "11_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "categoria": "NEGLIGENCIA",
+    "pregunta": "¿Le han dejado de proporcionar la ropa, el calzado, etc?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "12_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "12_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "12_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "12_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "categoria": "NEGLIGENCIA",
+    "pregunta": "¿Le han dejado de suministrar los medicamentos que necesita?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "13_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "13_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "13_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "13_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "categoria": "NEGLIGENCIA",
+    "pregunta": "¿Le han negado protección cuando la necesita?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "14_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "14_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "14_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "14_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "categoria": "NEGLIGENCIA",
+    "pregunta": "¿Le han negado acceso a la casa que habita?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "15_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "15_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "15_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "15_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "categoria": "ECONÓMICO",
+    "pregunta": "¿Alguien ha manejado o maneja su dinero sin su consentimiento?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "16_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "16_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "16_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "16_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "categoria": "ECONÓMICO",
+    "pregunta": "¿Le han quitado su dinero?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "17_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "17_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "17_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "17_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "categoria": "ECONÓMICO",
+    "pregunta": "¿Le han tomado sin permiso algún bien de su propiedad?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "18_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "18_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "18_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "18_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "categoria": "ECONÓMICO",
+    "pregunta": "¿Le han vendido alguna propiedad de su pertenencia sin su consentimiento?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "19_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "19_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "19_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "19_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "categoria": "ECONÓMICO",
+    "pregunta": "¿Le han presionado para que deje de usar usted el propietario de su casa o de alguna otra propiedad?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "20_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "20_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "20_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "20_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "categoria": "SEXUAL",
+    "pregunta": "¿Le han exigido tener relaciones sexuales aunque usted no quiera?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "21_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "21_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "21_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "21_sub_4"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "categoria": "SEXUAL",
+    "pregunta": "¿Le han tocado sus genitales sin su consentimiento?",
+    "opciones": [
+      {
+        "opcion": "Si",
+        "valor": "2"
+      },
+      {
+        "opcion": "No",
+        "valor": "1"
+      }
+    ],
+    "subpreguntas": [
+      {
+        "subpregunta": "¿Esto ocurrió...?",
+        "opciones": [
+          {
+            "opcion": "una vez",
+            "valor": "0"
+          },
+          {
+            "opcion": "pocas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "muchas veces",
+            "valor": "0"
+          },
+          {
+            "opcion": "No responde",
+            "valor": "0"
+          }
+        ],
+        "id": "22_sub_1"
+      },
+      {
+        "subpregunta": "¿Desde hace cuántos años ocurre esto?",
+        "opciones": [
+          {
+            "opcion": "Un año y menos",
+            "valor": "0"
+          },
+          {
+            "opcion": "No recuerda",
+            "valor": "0"
+          }
+        ],
+        "id": "22_sub_2"
+      },
+      {
+        "subpregunta": "¿Quién fue el responsable? ",
+        "opciones": [
+          {
+            "valor": "1",
+            "opcion": "Hijo/a"
+          },
+          {
+            "valor": "2",
+            "opcion": "Cónyuge/Pareja"
+          },
+          {
+            "valor": "3",
+            "opcion": "Nieto/a"
+          },
+          {
+            "valor": "4",
+            "opcion": "Cuidador/a"
+          },
+          {
+            "valor": "5",
+            "opcion": "Otro familiar"
+          },
+          {
+            "valor": "6",
+            "opcion": "No familiar"
+          }
+        ],
+        "id": "22_sub_3"
+      },
+      {
+        "subpregunta": "¿Es hombre o mujer?",
+        "opciones": [
+          {
+            "opcion": "Hombre",
+            "valor": "0"
+          },
+          {
+            "opcion": "Mujer",
+            "valor": "0"
+          }
+        ],
+        "id": "22_sub_4"
+      }
+    ]
+  }
+]
