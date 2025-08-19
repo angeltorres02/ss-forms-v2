@@ -13,7 +13,7 @@ import decryptData from "@/utils/decryptData";
 import { schemaBarreras } from "@/validations/barrerasValidation";
 
 import questions from "@/app/formulario/barreras/data/preguntas.json";
-import { isDisabled } from "@/utils/questions";
+import { isDisabledBarreras } from "@/utils/questions";
 import { SubmitButton } from "../SubmitButton";
 import clsx from "clsx";
 
@@ -93,7 +93,7 @@ export const FormBarreras = () => {
         className="flex flex-col justify-center items-center w-[80%]"
       >
         {questions.map((p) => {
-          const disabled = isDisabled(p.id, values);
+          const disabled = isDisabledBarreras(p.id, values);
 
           return (
             <Fragment key={p.id}>
