@@ -86,7 +86,7 @@ export const BarrerasScore = ({ preguntas }: BarrerasScoreProps) => {
     <div className="text-white w-[40%] bg-gray-800 p-2 rounded-xl flex flex-col h-full">
       <div>
         <p className="text-xl font-bold text-center bg-gray-700 rounded-xl p-2">
-          Barreras en el entorno fisico para la movilidad
+          Barreras en el entorno físico para la movilidad
         </p>
         <div className="grid grid-cols-2 gap-2 text-balance ">
           <p className="flex gap-2">
