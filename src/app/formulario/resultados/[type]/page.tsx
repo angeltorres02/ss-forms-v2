@@ -12,6 +12,8 @@ import {
   SARC_INFO,
   NORTON_INFO,
   BARRERAS_INFO,
+  MALTRATO_INFO,
+  OARS_INFO,
 } from "@/consts/resultsInfo";
 
 import { UserData } from "@/interface/userData";
@@ -21,6 +23,7 @@ import { NortonScore } from "@/components/score/NortonScore";
 import { SarcScore } from "@/components/score/SarcScore";
 import { MnaScore } from "@/components/score/MnaScore";
 import { BarrerasScore } from "@/components/score/BarrerasScore";
+import { MaltratoScore } from "@/components/score/MaltratoScore";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -41,11 +44,22 @@ export default function ResultadosPage() {
 
     allResponses.forEach((response) => {
       const currentResponses: Record<string, string> = {};
-      Object.entries(response.respuestas).forEach(
-        ([key, value]) =>
-          (currentResponses[info.info!.questions[Number(key) - 1]] =
-            info.info!.responses[Number(key) - 1][Number(value) - 1])
-      );
+      Object.entries(response.respuestas).forEach(([key, value]) => {
+        const questionIndex = Number(key) - 1;
+        const valueIndex = Number(value) - 1;
+
+        // Validar que los índices sean válidos
+        if (
+          questionIndex >= 0 &&
+          valueIndex >= 0 &&
+          info.info!.questions[questionIndex] &&
+          info.info!.responses[questionIndex] &&
+          info.info!.responses[questionIndex][valueIndex]
+        ) {
+          currentResponses[info.info!.questions[questionIndex]] =
+            info.info!.responses[questionIndex][valueIndex];
+        }
+      });
       result.push(currentResponses);
     });
 
@@ -88,6 +102,25 @@ export default function ResultadosPage() {
             }
           />
         );
+        break;
+
+      case "maltrato":
+        info = MALTRATO_INFO;
+        result = (
+          <MaltratoScore
+            preguntas={
+              allResponses[allResponses.length - 1]?.respuestas as Record<
+                string,
+                string | undefined
+              >
+            }
+          />
+        );
+        break;
+
+      case "oars":
+        info = OARS_INFO;
+        result = null; // No hay evaluación para OARS, es informativo
         break;
     }
     return { info, result };
@@ -206,12 +239,23 @@ export default function ResultadosPage() {
         </div>
       </div>
 
-      {data.length > 0 && (
+      {data.length > 0 && params.type !== "oars" && (
         <div className="mt-30 mx-[10vw] flex flex-col justify-center items-center mb-20">
           <h3 className="text-3xl font-bold mb-4">Resultados</h3>
           <div className="w-full sm:h-[600px] md:h-[550px] 2xl:h-[400px] flex gap-8">
             <Chart data={data} />
             {info.result}
+          </div>
+        </div>
+      )}
+
+      {params.type === "oars" && (
+        <div className="mt-30 mx-[10vw] flex flex-col justify-center items-center mb-20">
+          <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-lg">
+            <p className="font-medium">
+              Este es un formulario informativo sobre recursos sociales. Los
+              datos han sido registrados exitosamente para su evaluación médica.
+            </p>
           </div>
         </div>
       )}
