@@ -14,6 +14,7 @@ import {
   BARRERAS_INFO,
   MALTRATO_INFO,
   OARS_INFO,
+  GDS15_INFO,
 } from "@/consts/resultsInfo";
 
 import { UserData } from "@/interface/userData";
@@ -24,6 +25,7 @@ import { SarcScore } from "@/components/score/SarcScore";
 import { MnaScore } from "@/components/score/MnaScore";
 import { BarrerasScore } from "@/components/score/BarrerasScore";
 import { MaltratoScore } from "@/components/score/MaltratoScore";
+import { Gds15Score } from "@/components/score/Gds15Score";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -46,18 +48,47 @@ export default function ResultadosPage() {
       const currentResponses: Record<string, string> = {};
       Object.entries(response.respuestas).forEach(([key, value]) => {
         const questionIndex = Number(key) - 1;
-        const valueIndex = Number(value) - 1;
 
-        // Validar que los índices sean válidos
-        if (
-          questionIndex >= 0 &&
-          valueIndex >= 0 &&
-          info.info!.questions[questionIndex] &&
-          info.info!.responses[questionIndex] &&
-          info.info!.responses[questionIndex][valueIndex]
-        ) {
-          currentResponses[info.info!.questions[questionIndex]] =
-            info.info!.responses[questionIndex][valueIndex];
+        // Si la pregunta existe en info.questions
+        if (questionIndex >= 0 && info.info!.questions[questionIndex]) {
+          const questionText = info.info!.questions[questionIndex];
+          const responsesForQuestion = info.info!.responses[questionIndex];
+
+          // Si no hay respuestas predefinidas (campo de texto/número)
+          if (!responsesForQuestion || responsesForQuestion.length === 0) {
+            // Es un campo de texto o número, usar el valor directamente
+            if (
+              value &&
+              value !== "" &&
+              value !== null &&
+              value !== undefined
+            ) {
+              currentResponses[questionText] = String(value);
+            }
+          }
+          // Si el valor es un array (checkbox)
+          else if (Array.isArray(value)) {
+            const selectedOptions = value
+              .map((v) => {
+                const valueIndex = Number(v) - 1;
+                return responsesForQuestion[valueIndex];
+              })
+              .filter(Boolean)
+              .join(", ");
+
+            if (selectedOptions) {
+              currentResponses[questionText] = selectedOptions;
+            }
+          }
+          // Si es un valor simple (radio)
+          else {
+            const valueIndex = Number(value) - 1;
+
+            // Validar que el índice sea válido
+            if (valueIndex >= 0 && responsesForQuestion[valueIndex]) {
+              currentResponses[questionText] = responsesForQuestion[valueIndex];
+            }
+          }
         }
       });
       result.push(currentResponses);
@@ -90,6 +121,11 @@ export default function ResultadosPage() {
         result = <MnaScore score={data[data.length - 1]?.puntos || 0} />;
         break;
 
+      case "gds15":
+        info = GDS15_INFO;
+        result = <Gds15Score score={data[data.length - 1]?.puntos || 0} />;
+        break;
+
       case "barreras":
         info = BARRERAS_INFO;
         result = (
@@ -102,6 +138,7 @@ export default function ResultadosPage() {
             }
           />
         );
+        break;
         break;
 
       case "maltrato":
