@@ -17,6 +17,45 @@ export const SARC_INFO = {
   ],
 };
 
+export const GDS15_INFO = {
+  title: "Geriatric Depression Scale (GDS-15)",
+  subtitle: "Escala Geriátrica de Depresión de 15 ítems",
+  questions: [
+    "¿En general, está satisfecho(a) con su vida?",
+    "¿Ha abandonado muchas de sus tareas habituales y aficiones?",
+    "¿Siente que su vida está vacía?",
+    "¿Se siente con frecuencia aburrido(a)?",
+    "¿Se encuentra de buen humor la mayor parte del tiempo?",
+    "¿Teme que algo malo pueda ocurrirle?",
+    "¿Se siente feliz la mayor parte del tiempo?",
+    "¿Con frecuencia se siente desamparado(a), desprotegido(a)?",
+    "¿Prefiere usted quedarse en casa, más que salir y hacer cosas nuevas?",
+    "¿Cree que tiene más problemas de memoria que la mayoría de la gente?",
+    "¿En estos momentos, piensa que es estupendo estar vivo(a)?",
+    "¿Actualmente se siente un(a) inútil?",
+    "¿Se siente lleno(a) de energía?",
+    "¿Se siente sin esperanza en este momento?",
+    "¿Piensa que la mayoría de la gente está en mejor situación que usted?",
+  ],
+  responses: [
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+  ],
+};
+
 export const NORTON_INFO = {
   title: "Escala de Norton",
   subtitle: "Resultados para el riesgo de úlceras por presión",
