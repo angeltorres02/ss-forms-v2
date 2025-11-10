@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "pregunta": "¿En general, está satisfecho(a) con su vida?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "0" },
+      { "opcion": "No", "valor": "1" }
+    ]
+  },
+  {
+    "id": "2",
+    "pregunta": "¿Ha abandonado muchas de sus tareas habituales y aficiones?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "3",
+    "pregunta": "¿Siente que su vida está vacía?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "4",
+    "pregunta": "¿Se siente con frecuencia aburrido(a)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "5",
+    "pregunta": "¿Se encuentra de buen humor la mayor parte del tiempo?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "0" },
+      { "opcion": "No", "valor": "1" }
+    ]
+  },
+  {
+    "id": "6",
+    "pregunta": "¿Teme que algo malo pueda ocurrirle?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "7",
+    "pregunta": "¿Se siente feliz la mayor parte del tiempo?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "0" },
+      { "opcion": "No", "valor": "1" }
+    ]
+  },
+  {
+    "id": "8",
+    "pregunta": "¿Con frecuencia se siente desamparado(a), desprotegido(a)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "9",
+    "pregunta": "¿Prefiere usted quedarse en casa, más que salir y hacer cosas nuevas?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "10",
+    "pregunta": "¿Cree que tiene más problemas de memoria que la mayoría de la gente?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "11",
+    "pregunta": "¿En estos momentos, piensa que es estupendo estar vivo(a)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "0" },
+      { "opcion": "No", "valor": "1" }
+    ]
+  },
+  {
+    "id": "12",
+    "pregunta": "¿Actualmente se siente un(a) inútil?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "13",
+    "pregunta": "¿Se siente lleno(a) de energía?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "0" },
+      { "opcion": "No", "valor": "1" }
+    ]
+  },
+  {
+    "id": "14",
+    "pregunta": "¿Se siente sin esperanza en este momento?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "15",
+    "pregunta": "¿Piensa que la mayoría de la gente está en mejor situación que usted?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  }
+]
