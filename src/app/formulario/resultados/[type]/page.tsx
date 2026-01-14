@@ -15,6 +15,9 @@ import {
   MALTRATO_INFO,
   OARS_INFO,
   GDS15_INFO,
+  CESD7_INFO,
+  FRAIL_INFO,
+  BRADEN_INFO,
 } from "@/consts/resultsInfo";
 
 import { UserData } from "@/interface/userData";
@@ -26,6 +29,9 @@ import { MnaScore } from "@/components/score/MnaScore";
 import { BarrerasScore } from "@/components/score/BarrerasScore";
 import { MaltratoScore } from "@/components/score/MaltratoScore";
 import { Gds15Score } from "@/components/score/Gds15Score";
+import { Cesd7Score } from "@/components/score/Cesd7Score";
+import { FrailScore } from "@/components/score/FrailScore";
+import { BradenScore } from "@/components/score/BradenScore";
 
 export default function ResultadosPage() {
   const params = useParams<{ type: string }>();
@@ -116,6 +122,11 @@ export default function ResultadosPage() {
         result = <NortonScore score={data[data.length - 1]?.puntos || 0} />;
         break;
 
+      case "braden":
+        info = BRADEN_INFO;
+        result = <BradenScore score={data[data.length - 1]?.puntos || 0} />;
+        break;
+
       case "mna":
         info = MNA_INFO;
         result = <MnaScore score={data[data.length - 1]?.puntos || 0} />;
@@ -124,6 +135,25 @@ export default function ResultadosPage() {
       case "gds15":
         info = GDS15_INFO;
         result = <Gds15Score score={data[data.length - 1]?.puntos || 0} />;
+        break;
+
+      case "cesd7":
+        info = CESD7_INFO;
+        result = <Cesd7Score score={data[data.length - 1]?.puntos || 0} />;
+        break;
+
+      case "frail":
+        info = FRAIL_INFO;
+        result = (
+          <FrailScore
+            preguntas={
+              allResponses[allResponses.length - 1]?.respuestas as Record<
+                string,
+                string | undefined
+              >
+            }
+          />
+        );
         break;
 
       case "barreras":

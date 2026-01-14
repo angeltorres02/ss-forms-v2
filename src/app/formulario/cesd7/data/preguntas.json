@@ -1,0 +1,93 @@
+[
+  {
+    "id": "1",
+    "pregunta": "¿Sentía como si no pudiera quitarse la tristeza?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "pregunta": "¿Le costaba concentrarse en lo que estaba haciendo?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "pregunta": "¿Se sintió deprimido/a?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "pregunta": "¿Le parecía que todo lo que hacía era un esfuerzo?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "pregunta": "¿No durmió bien?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "pregunta": "¿Disfrutó de la vida?",
+    "opciones": [
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "0"
+      },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "1" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "2" },
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "3" }
+    ]
+  },
+  {
+    "id": "7",
+    "pregunta": "¿Se sintió triste?",
+    "opciones": [
+      { "opcion": "Rara vez o nunca (menos de 1 día)", "valor": "0" },
+      { "opcion": "Pocas veces o alguna vez (1-2 días)", "valor": "1" },
+      { "opcion": "Un número de veces considerable (3-4 días)", "valor": "2" },
+      {
+        "opcion": "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+        "valor": "3"
+      }
+    ]
+  }
+]

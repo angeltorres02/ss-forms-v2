@@ -56,6 +56,152 @@ export const GDS15_INFO = {
   ],
 };
 
+export const CESD7_INFO = {
+  title: "Escala de Depresión del Centro de Estudios Epidemiológicos (CESD-7)",
+  subtitle: "Durante la última semana usted...",
+  questions: [
+    "¿Sentía como si no pudiera quitarse la tristeza?",
+    "¿Le costaba concentrarse en lo que estaba haciendo?",
+    "¿Se sintió deprimido/a?",
+    "¿Le parecía que todo lo que hacía era un esfuerzo?",
+    "¿No durmió bien?",
+    "¿Disfrutó de la vida?",
+    "¿Se sintió triste?",
+  ],
+  responses: [
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+    [
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Rara vez o nunca (menos de 1 día)",
+    ],
+    [
+      "Rara vez o nunca (menos de 1 día)",
+      "Pocas veces o alguna vez (1-2 días)",
+      "Un número de veces considerable (3-4 días)",
+      "Todo el tiempo o la mayoría del tiempo (5-7 días)",
+    ],
+  ],
+};
+
+export const FRAIL_INFO = {
+  title: "Escala FRAIL",
+  subtitle: "Evaluación de fragilidad en adultos mayores",
+  questions: [
+    "En las últimas 4 semanas, ¿Qué tanto tiempo se sintió fatigado/a?",
+    "¿Tiene dificultad para subir 10 escalones (una escalera)?",
+    "¿Tiene dificultad para caminar 100 metros (dos cuadras sin descansar)?",
+    "¿Tiene hipertensión arterial sistémica?",
+    "¿Tiene diabetes?",
+    "¿Tiene cáncer (otro que no sea un cáncer menor en piel)?",
+    "¿Tiene enfermedad pulmonar crónica?",
+    "¿Tiene cardiopatía isquémica?",
+    "¿Tiene insuficiencia cardíaca congestiva?",
+    "¿Tiene angina?",
+    "¿Tiene asma?",
+    "¿Tiene artritis (incluyendo osteoartrosis y artritis reumatoide)?",
+    "¿Tiene enfermedad vascular cerebral (embolia)?",
+    "¿Tiene enfermedad renal crónica?",
+    "Peso actual (kg)",
+    "Peso hace un año (kg)",
+  ],
+  responses: [
+    [
+      "Todo el tiempo",
+      "La mayor parte del tiempo",
+      "Algo de tiempo",
+      "Muy poco tiempo",
+      "Nada de tiempo",
+    ],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    ["Sí", "No"],
+    [], // Campo numérico
+    [], // Campo numérico
+  ],
+};
+
+export const BRADEN_INFO = {
+  title: "Escala de Braden",
+  subtitle: "Valoración del riesgo de úlceras por presión",
+  questions: [
+    "Percepción Sensorial",
+    "Exposición a la Humedad",
+    "Actividad",
+    "Movilidad",
+    "Nutrición",
+    "Roce y Peligro de Lesiones",
+  ],
+  responses: [
+    [
+      "Completamente limitada",
+      "Muy limitada",
+      "Ligeramente limitada",
+      "Sin limitaciones",
+    ],
+    [
+      "Constantemente húmeda",
+      "A menudo húmeda",
+      "Ocasionalmente húmeda",
+      "Raramente húmeda",
+    ],
+    [
+      "Encamado/a",
+      "En silla",
+      "Deambula ocasionalmente",
+      "Deambula frecuentemente",
+    ],
+    [
+      "Completamente inmóvil",
+      "Muy limitada",
+      "Ligeramente limitada",
+      "Sin limitaciones",
+    ],
+    ["Muy pobre", "Probablemente inadecuada", "Adecuada", "Excelente"],
+    ["Problema", "Problema potencial", "Sin problema aparente"],
+  ],
+};
+
 export const NORTON_INFO = {
   title: "Escala de Norton",
   subtitle: "Resultados para el riesgo de úlceras por presión",

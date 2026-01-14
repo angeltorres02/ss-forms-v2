@@ -1,0 +1,129 @@
+[
+  {
+    "id": "1",
+    "pregunta": "En las últimas 4 semanas, ¿Qué tanto tiempo se sintió fatigado/a?",
+    "opciones": [
+      { "opcion": "Todo el tiempo", "valor": "1" },
+      { "opcion": "La mayor parte del tiempo", "valor": "1" },
+      { "opcion": "Algo de tiempo", "valor": "0" },
+      { "opcion": "Muy poco tiempo", "valor": "0" },
+      { "opcion": "Nada de tiempo", "valor": "0" }
+    ]
+  },
+  {
+    "id": "2",
+    "pregunta": "Usted solo sin ningún auxiliar como bastón o andadera; ¿Tiene dificultad para subir 10 escalones (una escalera)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "3",
+    "pregunta": "Usted solo sin ningún auxiliar como bastón o andadera; ¿Tiene dificultad para caminar 100 metros (dos cuadras sin descansar)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "4",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene hipertensión arterial sistémica?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "5",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene diabetes?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "6",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene cáncer (otro que no sea un cáncer menor en piel)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "7",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene enfermedad pulmonar crónica?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "8",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene cardiopatía isquémica?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "9",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene insuficiencia cardíaca congestiva?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "10",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene angina?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "11",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene asma?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "12",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene artritis (incluyendo osteoartrosis y artritis reumatoide)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "13",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene enfermedad vascular cerebral (embolia)?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "14",
+    "pregunta": "¿Algún doctor o médico le ha comentado que tiene enfermedad renal crónica?",
+    "opciones": [
+      { "opcion": "Sí", "valor": "1" },
+      { "opcion": "No", "valor": "0" }
+    ]
+  },
+  {
+    "id": "15",
+    "pregunta": "¿Cuánto pesa actualmente con su ropa sin zapatos? (kg)",
+    "opciones": [],
+    "tipo": "numero"
+  },
+  {
+    "id": "16",
+    "pregunta": "Hace un año ¿Cuánto pesaba con ropa y sin zapatos? (kg)",
+    "opciones": [],
+    "tipo": "numero"
+  }
+]
