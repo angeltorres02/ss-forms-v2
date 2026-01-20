@@ -1,6 +1,5 @@
-import { Form } from "@/components/Form";
 import { Header } from "@/components/Header";
-import questions from "./data/preguntas.json";
+import { FrailForm } from "@/components/frail/FrailForm";
 
 export default function FrailPage() {
   return (
@@ -9,7 +8,7 @@ export default function FrailPage() {
         title="Escala FRAIL"
         subtitle="Evaluación de fragilidad en adultos mayores"
       />
-      <Form preguntas={questions} />
+      <FrailForm />
     </>
   );
 }

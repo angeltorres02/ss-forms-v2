@@ -27,9 +27,9 @@ export const Question = ({
 
         <div className="flex gap-2 w-full justify-between">
           <div className="bg-gray-700 rounded-lg p-4 mb-4 w-[60%]">
-            {question.opciones.map((opcion) => (
+            {question.opciones.map((opcion, index) => (
               <label
-                key={opcion.valor}
+                key={`${question.id}-${index}`}
                 className={`flex gap-2  hover:bg-gray-600 transition-colors duration-200 rounded-lg p-2 text-white 
               ${selectedValue === opcion.valor ? "bg-gray-600" : ""}`}
               >

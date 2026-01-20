@@ -1,6 +1,5 @@
-import { Form } from "@/components/Form";
 import { Header } from "@/components/Header";
-import questions from "./data/preguntas.json";
+import { BradenForm } from "@/components/braden/BradenForm";
 
 export default function BradenPage() {
   return (
@@ -9,7 +8,7 @@ export default function BradenPage() {
         title="Escala de Braden"
         subtitle="Valoración del riesgo de úlceras por presión"
       />
-      <Form preguntas={questions} />
+      <BradenForm />
     </>
   );
 }
