@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { FormMaltrato } from "@/components/maltrato/FormMaltrato";
+import { DynamicForm } from "@/components/DynamicForm";
 
 export default function MaltratoPage() {
   return (
@@ -8,7 +8,7 @@ export default function MaltratoPage() {
         title="Escala geriátrica de maltrato"
         subtitle="Evalúa la presencia de diferentes tipos de maltrato en personas mayores"
       />
-      <FormMaltrato />
+      <DynamicForm tipo="maltrato" />
     </>
   );
 }

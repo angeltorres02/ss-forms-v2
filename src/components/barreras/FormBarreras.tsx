@@ -120,7 +120,7 @@ export const FormBarreras = () => {
                 key={p.id}
                 className={clsx(
                   "text-center text-white w-full flex flex-col items-center justify-center gap-1 mt-8 transition-opacity",
-                  { "opacity-70 cursor-not-allowed": disabled }
+                  { "opacity-70 cursor-not-allowed": disabled },
                 )}
               >
                 <p className="text-balance bg-gray-900 p-2 rounded-xl w-[70%]">
@@ -135,7 +135,7 @@ export const FormBarreras = () => {
                         "flex p-2 rounded-xl mx-2 gap-2 group transition-opacity",
                         disabled
                           ? "cursor-not-allowed opacity-50"
-                          : "hover:bg-gray-600 cursor-pointer"
+                          : "hover:bg-gray-600 cursor-pointer",
                       )}
                     >
                       <input

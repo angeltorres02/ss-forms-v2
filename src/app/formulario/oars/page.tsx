@@ -1,5 +1,5 @@
-import { Header } from "../../../components/Header";
-import { OarsForm } from "../../../components/oars/OarsForm";
+import { Header } from "@/components/Header";
+import { DynamicForm } from "@/components/DynamicForm";
 
 export default function OarsPage() {
   return (
@@ -8,7 +8,7 @@ export default function OarsPage() {
         title="Older American and Resource Socials (OARS)"
         subtitle="Escala de recursos sociales"
       />
-      <OarsForm />
+      <DynamicForm tipo="oars" />
     </>
   );
 }
